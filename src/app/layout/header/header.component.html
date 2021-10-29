@@ -1,0 +1,244 @@
+<header ng-sidebar-content class="header header-2 header-intro-clearance fixed-top">
+
+    <div class="header-top">
+        <div class="container">
+            <!-- <div class="header-left">
+                <p>Special collection already available.</p><a href="#">&nbsp;Read more ...</a>
+            </div> -->
+            <!-- End .header-left -->
+
+            <div class="header-right">
+
+                <!-- <ul class="top-menu">
+                    <li>
+                        <a href="#">Links</a>
+                        <ul>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="#">USD</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="#">Eur</a></li>
+                                            <li><a href="#">Usd</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="#">English</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">French</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li *ngIf="!loginVerified()"><a (click)="openModal()" class="cursor-pointer">Inicia sesión / Registrate</a></li>
+                            <li *ngIf="loginVerified()"><a (click)="onLoggedout()" class="cursor-pointer">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+                <!-- End .top-menu -->
+            </div>
+            <!-- End .header-right -->
+
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .header-top -->
+
+    <div class="header-middle">
+        <div class="container">
+
+            <div class="header-left">
+                <button (click)="toggleSidebar()" class="mobile-menu-toggler">
+                    <span class="sr-only">Toggle mobile menu</span>
+                    <i class="icon-bars"></i>
+                </button>
+
+                <a routerLink="/" class="logo">
+                    <!-- <img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" width="105" height="25"> -->
+                    ECOMMERCE
+                </a>
+            </div>
+            <!-- End .header-left -->
+
+            <div class="header-center">
+                <div class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
+                    <a class="search-toggle" role="button"><i class="icon-search"></i></a>
+                    <form action="#" method="get">
+                        <div class="header-search-wrapper search-wrapper-wide">
+                            <label for="q" class="sr-only">Buscar</label>
+                            <input type="search" class="form-control" name="q" id="q" placeholder="Busca un producto ..." required>
+                            <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                        </div>
+                        <!-- End .header-search-wrapper -->
+                    </form>
+                </div>
+                <!-- End .header-search -->
+            </div>
+
+            <div class="header-right">
+
+                <!-- <div *ngIf="!loginVerified()" class="account">
+                    <a class="cursor-pointer" (click)="openModal()" title="Mi cuenta">
+                        <div class="icon">
+                            <i class="icon-user"></i>
+                        </div>
+                        <p>{{ user ? user.data.name: "Cuenta"}}</p>
+                    </a>
+                </div> -->
+
+                <!-- <div *ngIf="loginVerified()" class="account header-dropdown">
+                    <a routerLink="/account" class="cursor-pointer" title="Mi cuenta">
+                        <div class="icon">
+                            <i class="icon-user"></i>
+                        </div>
+                        <p>{{ user ? user.data.name: "Cuenta"}}</p>
+                    </a>
+                    <div class="header-menu">
+                        <ul>
+                            <li><a routerLink="/account" class="cursor-pointer">Mi cuenta</a></li>
+                            <li><a (click)="onLoggedout()" class="cursor-pointer">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="wishlist">
+                    <a routerLink="/wishlist" class="cursor-pointer" title="Deseos">
+                        <div class="icon">
+                            <i class="icon-heart-o"></i>
+                            <span class="wishlist-count badge">0</span>
+                        </div>
+                        <p>Deseos</p>
+                    </a>
+                </div>
+                <!-- End .compare-dropdown -->
+
+                <div class="dropdown cart-dropdown">
+                    <a class="dropdown-toggle cursor-pointer" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <div class="icon">
+                            <i class="icon-shopping-cart"></i>
+                            <span class="cart-count">{{cartData.data[0].numInCart != 0 ? cartData.data.length : 0}}</span>
+                        </div>
+                        <p>Carrito</p>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+
+                        <div class="dropdown-cart-products" [class.content]="cartData.data.length >= 4" *ngIf="cartData.data[0].numInCart != 0">
+
+                            <div class="product" *ngFor="let c of cartData.data; let i = index">
+                                <div class="product-cart-details">
+                                    <h4 class="product-title">
+                                        <a [routerLink]="['product', c.product.id]">{{c.product.description}}</a>
+                                    </h4>
+
+                                    <span class="cart-product-info">
+                                        <span class="cart-product-qty">{{c.numInCart}}</span> x {{ c.product.price | currency: 'USD'}}
+                                    </span>
+                                </div>
+                                <!-- End .product-cart-details -->
+
+                                <figure class="product-image-container">
+                                    <a [routerLink]="['product', c.product.id]" class="product-image-cart">
+                                        <img [src]="c.product?.image" alt="{{c.product.title}}" width="60px" height="60px">
+                                    </a>
+                                </figure>
+                                <a class="btn-remove cursor-pointer" title="Eliminar" (click)="cartService.DeleteProductFromCart(i)"><i class="icon-close"></i></a>
+                            </div>
+                            <!-- End .product -->
+
+                        </div>
+                        <!-- End .cart-product -->
+
+                        <div class="dropdown-cart-total">
+                            <span>Total</span>
+
+                            <span class="cart-total-price">{{ cartTotal | currency: 'USD'}}</span>
+                        </div>
+                        <!-- End .dropdown-cart-total -->
+
+                        <div class="dropdown-cart-action">
+                            <a routerLink="/cart" class="btn btn-primary">Carrito</a>
+                            <a routerLink="/checkout" class="btn btn-outline-primary-2"><span>Checkout</span><i
+                                    class="icon-long-arrow-right"></i></a>
+                        </div>
+                        <!-- End .dropdown-cart-total -->
+                    </div>
+                    <!-- End .dropdown-menu -->
+                </div>
+                <!-- End .cart-dropdown -->
+            </div>
+            <!-- End .header-right -->
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .header-middle -->
+
+    <div class="header-bottom sticky-header">
+        <div class="container">
+            <div class="header-left">
+                <div class="dropdown category-dropdown">
+                    <a routerLink="/categories" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+                        Categorías
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <nav class="side-nav">
+                            <ul class="menu-vertical sf-arrows">
+                                <!-- <li class="item-lead"><a>Gift Ideas</a></li> -->
+                                <li>
+                                    <a routerLink="/categories">Todas</a>
+                                </li>
+                                <!-- <li *ngFor="let category of categories">
+                                    <a [routerLink]="['category-products', category.code]">{{category.name}}</a>
+                                </li> -->
+                            </ul>
+                            <!-- End .menu-vertical -->
+                        </nav>
+                        <!-- End .side-nav -->
+                    </div>
+                    <!-- End .dropdown-menu -->
+                </div>
+                <!-- End .category-dropdown -->
+            </div>
+            <!-- End .header-left -->
+
+            <div class="header-center">
+                <nav class="main-nav">
+                    <ul class="menu sf-arrows">
+                        <li class="megamenu-container" [routerLinkActive]="['active']">
+                            <a routerLink="/home">Inicio</a>
+                        </li>
+                        <li [routerLinkActive]="['active']">
+                            <a routerLink="/products">Productos</a>
+                        </li>
+                        <li [routerLinkActive]="['active']">
+                            <a routerLink="/promotions">Promociones</a>
+                        </li>
+                        <li [routerLinkActive]="['active']">
+                            <a routerLink="/about">Nosotros</a>
+                        </li>
+                        <li [routerLinkActive]="['active']">
+                            <a routerLink="/contact">Contáctanos</a>
+                        </li>
+                    </ul>
+                    <!-- End .menu -->
+                </nav>
+                <!-- End .main-nav -->
+            </div>
+            <!-- End .header-center -->
+
+            <div class="header-right">
+                <i class="la la-lightbulb-o"></i>
+                <p>Descuentos de hasta el<span class="highlight">&nbsp;30%</span></p>
+            </div>
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .header-bottom -->
+</header>

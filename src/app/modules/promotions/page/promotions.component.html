@@ -1,0 +1,83 @@
+<main class="main">
+    <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        <div class="container">
+            <h1 class="page-title">Promociones<span>Tienda</span></h1>
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .page-header -->
+    <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Promociones</li>
+            </ol>
+        </div>
+        <!-- End .container -->
+    </nav>
+    <!-- End .breadcrumb-nav -->
+
+    <div class="page-content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6 col-md-4 col-lg-3" *ngFor="let product of products">
+                    <div class="product product-3">
+                        <figure class="product-media">
+                            <span class="product-label">Promo</span>
+                            <a (click)="selectProduct(product.id)">
+                                <img appImgBroken [customImg]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'" [src]="product.image" alt="Product image" class="product-image">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a class="btn-product-icon btn-wishlist btn-expandable cursor-pointer"><span>A lista de deseos</span></a>
+                                <a (click)="selectProduct(product.id)" class="btn-product-icon btn-quickview btn-expandable cursor-pointer" title="Ver"><span>Ver detalles</span></a>
+                            </div>
+                            <!-- End .product-action-vertical -->
+                        </figure>
+                        <!-- End .product-media -->
+
+                        <div class="product-body">
+                            <div class="product-action">
+                                <a [class.disabled]="product.stock < 1" [class.btn-outline-danger]="product.stock < 1" (click)="addToCart(product.id)" class="btn-product btn-cart cursor-pointer"><span>{{ product.stock < 1 ? "No en Stock": "Agregar al carrito"}}</span></a>
+                            </div>
+                            <!-- End .product-action -->
+                            <div class="product-cat">
+                                <a>Galletas</a>
+                            </div>
+                            <!-- End .product-cat -->
+                            <h3 class="product-title"><a class="cursor-pointer" (click)="selectProduct(product.id)">{{product.title}}</a></h3>
+                            <!-- End .product-title -->
+                            <div class="product-price">
+                                <span class="new-price">{{product.price | currency:'USD'}}</span>
+                                <span class="old-price">{{product.price | currency:'USD'}}</span>
+                            </div>
+                            <!-- End .product-price -->
+                        </div>
+                        <!-- End .product-body -->
+
+                        <div class="product-footer">
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 40%;"></div>
+                                    <!-- End .ratings-val -->
+                                </div>
+                                <!-- End .ratings -->
+                                <span class="ratings-text">( 4 Reviews )</span>
+                            </div>
+                            <!-- End .rating-container -->
+                        </div>
+                        <!-- End .product-footer -->
+                    </div>
+                    <!-- End .product -->
+                </div>
+                <!-- End .col-sm-6 col-lg-3 -->
+            </div>
+            <!-- End .row -->
+            <hr class="mt-0 mb-5" />
+        </div>
+        <!-- End .container -->
+    </div>
+    <!-- End .page-content -->
+</main>
+<!-- End .main -->
