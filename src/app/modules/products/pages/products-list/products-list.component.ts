@@ -41,12 +41,8 @@ export class ProductsListComponent implements OnInit {
     return `${(rate*100)/5}%`;
   }
 
-  selectProduct(code: number){
-    this.router.navigate(['/product',code]).then();
-  }
-
   addToCart(code : number){
-    this.cartService.AddProductToCart(code.toString());
+    this.cartService.AddProductToCart(code);
   }
 
 }

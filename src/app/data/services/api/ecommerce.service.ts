@@ -26,7 +26,7 @@ export class EcommerceService {
     data: IProduct[],
   }> {
     const response = { error: true, msg: '', data: null };
-    return this.httpClient.get<IProduct>(`${API_ROUTES.ECOMMERCE.PRODUCTS}?limit=8`)
+    return this.httpClient.get<IProduct[]>(`${API_ROUTES.ECOMMERCE.PRODUCTS}?limit=8`)
       .pipe(
         map(r => {
           response.msg = 'Get products';
@@ -37,6 +37,73 @@ export class EcommerceService {
         catchError(this.error)
       );
   }
+
+  /**
+   * 
+   * @returns 
+   */
+  getProductById(id: number): Observable<{
+    error: boolean,
+    msg: string,
+    data: IProduct,
+  }> {
+    const response = { error: true, msg: '', data: null };
+    return this.httpClient.get<IProduct>(`${API_ROUTES.ECOMMERCE.PRODUCTS}/${id}`)
+      .pipe(
+        map(r => {
+          response.msg = 'Get product by id';
+          response.error = false;
+          response.data = r;
+          return response;
+        }),
+        catchError(this.error)
+      );
+  }
+
+  /**
+   * 
+   * @returns 
+   */
+  getCategories(): Observable<{
+    error: boolean,
+    msg: string,
+    data: string[],
+  }> {
+    const response = { error: true, msg: '', data: null };
+    return this.httpClient.get<string[]>(API_ROUTES.ECOMMERCE.CATEGORIES)
+      .pipe(
+        map(r => {
+          response.msg = 'Get categories';
+          response.error = false;
+          response.data = r;
+          return response;
+        }),
+        catchError(this.error)
+      );
+  }
+
+  /**
+   * 
+   * @returns 
+   */
+  getProductsByCategory(category: string): Observable<{
+    error: boolean,
+    msg: string,
+    data: IProduct[],
+  }> {
+    const response = { error: true, msg: '', data: null };
+    return this.httpClient.get<IProduct[]>(`${API_ROUTES.ECOMMERCE.CATEGORY}/${category}`)
+      .pipe(
+        map(r => {
+          response.msg = 'Get products by category';
+          response.error = false;
+          response.data = r;
+          return response;
+        }),
+        catchError(this.error)
+      );
+  }
+
 
   /**
    * Handle error

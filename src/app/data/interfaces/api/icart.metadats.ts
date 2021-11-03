@@ -14,7 +14,7 @@ export interface ICartModelPublic {
     total: number;
     prodData: [
         {
-            code : string,
+            id : number,
             inCart : number
         }      
     ];

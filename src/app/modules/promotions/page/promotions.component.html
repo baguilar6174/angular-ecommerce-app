@@ -25,13 +25,13 @@
                     <div class="product product-3">
                         <figure class="product-media">
                             <span class="product-label">Promo</span>
-                            <a (click)="selectProduct(product.id)">
+                            <a routerLink="/products/{{product.id}}">
                                 <img appImgBroken [customImg]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'" [src]="product.image" alt="Product image" class="product-image">
                             </a>
 
                             <div class="product-action-vertical">
                                 <a class="btn-product-icon btn-wishlist btn-expandable cursor-pointer"><span>A lista de deseos</span></a>
-                                <a (click)="selectProduct(product.id)" class="btn-product-icon btn-quickview btn-expandable cursor-pointer" title="Ver"><span>Ver detalles</span></a>
+                                <a routerLink="/products/{{product.id}}" class="btn-product-icon btn-quickview btn-expandable cursor-pointer" title="Ver"><span>Ver detalles</span></a>
                             </div>
                             <!-- End .product-action-vertical -->
                         </figure>
@@ -39,18 +39,18 @@
 
                         <div class="product-body">
                             <div class="product-action">
-                                <a [class.disabled]="product.stock < 1" [class.btn-outline-danger]="product.stock < 1" (click)="addToCart(product.id)" class="btn-product btn-cart cursor-pointer"><span>{{ product.stock < 1 ? "No en Stock": "Agregar al carrito"}}</span></a>
+                                <a [class.disabled]="product.rating.count < 1" [class.btn-outline-danger]="product.rating.count < 1" (click)="addToCart(product.id)" class="btn-product btn-cart cursor-pointer"><span>{{ product.rating.count < 1 ? "No en Stock": "Agregar al carrito"}}</span></a>
                             </div>
                             <!-- End .product-action -->
                             <div class="product-cat">
                                 <a>Galletas</a>
                             </div>
                             <!-- End .product-cat -->
-                            <h3 class="product-title"><a class="cursor-pointer" (click)="selectProduct(product.id)">{{product.title}}</a></h3>
+                            <h3 class="product-title"><a class="cursor-pointer" routerLink="/products/{{product.id}}">{{product.title | shorttext: 100 }}</a></h3>
                             <!-- End .product-title -->
                             <div class="product-price">
                                 <span class="new-price">{{product.price | currency:'USD'}}</span>
-                                <span class="old-price">{{product.price | currency:'USD'}}</span>
+                                <span class="old-price">{{(product.price+5) | currency:'USD'}}</span>
                             </div>
                             <!-- End .product-price -->
                         </div>

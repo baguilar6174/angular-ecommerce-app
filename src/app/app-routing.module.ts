@@ -63,6 +63,11 @@ const routes: Routes = [
         loadChildren:() => 
           import('@modules/categories/categories.module').then( (m)=> m.CategoriesModule)
       },
+      {
+        path: INTERNAL_PATHS.ECOMMERCE_BUSINESS,
+        loadChildren:() => 
+          import('@modules/business/business.module').then( (m)=> m.BusinessModule)
+      },
       { path:'**', redirectTo: '/home', pathMatch: 'full' },
     ]
   },

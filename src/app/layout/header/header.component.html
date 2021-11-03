@@ -60,8 +60,7 @@
                 </button>
 
                 <a routerLink="/" class="logo">
-                    <!-- <img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" width="105" height="25"> -->
-                    ECOMMERCE
+                    <img src="assets/images/demos/demo-2/logo.png" alt="ECOMMERCE" width="105" height="25">
                 </a>
             </div>
             <!-- End .header-left -->
@@ -108,7 +107,7 @@
                 </div> -->
 
                 <div class="wishlist">
-                    <a routerLink="/wishlist" class="cursor-pointer" title="Deseos">
+                    <a routerLink="/purchase/wishlist" class="cursor-pointer" title="Deseos">
                         <div class="icon">
                             <i class="icon-heart-o"></i>
                             <span class="wishlist-count badge">0</span>
@@ -134,7 +133,7 @@
                             <div class="product" *ngFor="let c of cartData.data; let i = index">
                                 <div class="product-cart-details">
                                     <h4 class="product-title">
-                                        <a [routerLink]="['product', c.product.id]">{{c.product.description}}</a>
+                                        <a [routerLink]="['product', c.product.id]">{{c.product.title | shorttext: 60 }}</a>
                                     </h4>
 
                                     <span class="cart-product-info">
@@ -163,8 +162,8 @@
                         <!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">
-                            <a routerLink="/cart" class="btn btn-primary">Carrito</a>
-                            <a routerLink="/checkout" class="btn btn-outline-primary-2"><span>Checkout</span><i
+                            <a routerLink="/purchase/cart" class="btn btn-primary">Carrito</a>
+                            <a routerLink="/purchase/order" class="btn btn-outline-primary-2"><span>Ordenar</span><i
                                     class="icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End .dropdown-cart-total -->
@@ -194,9 +193,9 @@
                                 <li>
                                     <a routerLink="/categories">Todas</a>
                                 </li>
-                                <!-- <li *ngFor="let category of categories">
-                                    <a [routerLink]="['category-products', category.code]">{{category.name}}</a>
-                                </li> -->
+                                <li *ngFor="let category of categories">
+                                    <a [routerLink]="['categories', category]">{{category}}</a>
+                                </li>
                             </ul>
                             <!-- End .menu-vertical -->
                         </nav>

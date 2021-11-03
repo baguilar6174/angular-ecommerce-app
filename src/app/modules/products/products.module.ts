@@ -5,6 +5,10 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 
+import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
+import { ToastrModule } from 'ngx-toastr';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { ProductCardComponent } from './components/product-card/product-card.com
   ],
   imports: [
     SharedModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot(),
+    NgxNumberSpinnerModule,
+    CarouselModule
   ]
 })
 export class ProductsModule { }

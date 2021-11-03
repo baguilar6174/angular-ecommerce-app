@@ -10,10 +10,9 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 
-import { NgxSpinnerModule } from "ngx-spinner";
-import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { SidebarModule } from 'ng-sidebar';
+
 import { Page400Component } from './modules/server/page400/page400.component';
 import { Page403Component } from './modules/server/page403/page403.component';
 import { Page404Component } from './modules/server/page404/page404.component';
@@ -34,10 +33,7 @@ import { Page500Component } from './modules/server/page500/page500.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgxSpinnerModule,
-    NgxNumberSpinnerModule,
     ToastrModule.forRoot(),
-    NgxNumberSpinnerModule,
     SidebarModule.forRoot(),
     CoreModule,
     SharedModule,

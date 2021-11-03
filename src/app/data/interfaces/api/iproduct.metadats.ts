@@ -8,7 +8,7 @@ export interface IProduct {
     category:    ICategory;
     image:       string;
     rating:      IRating;
-    stock:       number;
+    // stock:       number;
 }
 
 export interface IRating {

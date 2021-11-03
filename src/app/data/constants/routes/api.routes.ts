@@ -12,5 +12,7 @@ export const API_ROUTES = {
     },
     ECOMMERCE: {
         PRODUCTS: `${url}/products`,
+        CATEGORIES: `${url}/products/categories`,
+        CATEGORY: `${url}/products/category`,
     }
 }
