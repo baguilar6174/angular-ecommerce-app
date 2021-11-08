@@ -20,8 +20,6 @@ export class PromotionsComponent implements OnInit {
 
   constructor(
     private ecommerceService: EcommerceService,
-    private router: Router,
-    private cartService: CartService
   ) { }
 
   ngOnInit(): void {
@@ -35,14 +33,6 @@ export class PromotionsComponent implements OnInit {
       }
       this.loading = false;
     });
-  }
-
-  getRating(rate: number):string {
-    return `${(rate*100)/5}%`;
-  }
-
-  addToCart(code : number){
-    this.cartService.AddProductToCart(code);
   }
 
 }

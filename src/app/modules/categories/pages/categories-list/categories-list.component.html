@@ -16,36 +16,17 @@
         <!-- End .container-fluid -->
     </nav>
     <!-- End .breadcrumb-nav -->
-
     <div class="page-content">
         <div class="categories-page">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3" *ngFor="let category of categories">
-                        <div class="banner banner-cat banner-badge">
-                            <a routerLink="/categories/{{category}}">
-                                <img [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'" [alt]="category" width="280px" height="280px">
-                            </a>
-                            <a routerLink="/categories/{{category}}" class="banner-link cursor-pointer" >
-                                <h3 class="banner-title">{{category}}</h3>
-                                <!-- End .banner-title -->
-                                <h4 class="banner-subtitle">6 productos</h4>
-                                <!-- End .banner-subtitle -->
-                                <span class="banner-link-text">Ver productos</span>
-                            </a>
-                            <!-- End .banner-link -->
-                        </div>
-                        <!-- End .banner -->
+                        <!-- category -->
+                        <app-category-card [category]="category"></app-category-card>
+                        <!-- End category -->
                     </div>
-                    <!-- End .col-sm-6 -->
                 </div>
-                <!-- End .row -->
             </div>
-            <!-- End .container -->
         </div>
-        <!-- End .categories-page -->
-        <!-- End .categories-page -->
     </div>
-    <!-- End .page-content -->
 </main>
-<!-- End .main -->

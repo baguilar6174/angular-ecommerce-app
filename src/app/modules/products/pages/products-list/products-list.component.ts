@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { IProduct } from '@data/interfaces/api/iproduct.metadats';
 import { EcommerceService } from '@data/services/api/ecommerce.service';
-import { CartService } from '@shared/services/cart.service';
 
 @Component({
   selector: 'app-products-list',
@@ -19,9 +17,7 @@ export class ProductsListComponent implements OnInit {
   public error: boolean = false;
 
   constructor(
-    private ecommerceService: EcommerceService,
-    private router: Router,
-    private cartService: CartService
+    private ecommerceService: EcommerceService
   ) { }
 
   ngOnInit(): void {
@@ -36,13 +32,4 @@ export class ProductsListComponent implements OnInit {
       this.loading = false;
     });
   }
-
-  getRating(rate: number):string {
-    return `${(rate*100)/5}%`;
-  }
-
-  addToCart(code : number){
-    this.cartService.AddProductToCart(code);
-  }
-
 }

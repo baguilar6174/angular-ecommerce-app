@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesListComponent } from './pages/categories-list/categories-list.component';
 import { CategoriesDetailComponent } from './pages/categories-detail/categories-detail.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +11,7 @@ import { CategoriesDetailComponent } from './pages/categories-detail/categories-
     CategoriesDetailComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     CategoriesRoutingModule
   ]
 })
