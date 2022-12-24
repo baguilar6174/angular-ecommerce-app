@@ -1,1 +1,1 @@
-export const components: any[] = [];
+export const components: [] = [];

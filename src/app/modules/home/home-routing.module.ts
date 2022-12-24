@@ -6,7 +6,7 @@ import { HomeComponent } from './page/home.component';
 const routes: Routes = [{ path: EMPTY_STRING, component: HomeComponent }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule],
 })
 export class HomeRoutingModule {}

@@ -7,7 +7,7 @@ import { LoginComponent } from './pages';
 const routes: Routes = [{ path: EMPTY_STRING, component: LoginComponent }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule],
 })
 export class AuthRoutingModule {}

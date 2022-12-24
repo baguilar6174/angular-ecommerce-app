@@ -9,23 +9,17 @@ import { directives } from './directives';
 import { pipes } from './pipes';
 
 @NgModule({
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule,
-    CommonModule,
-  ],
-  declarations: [...components, ...directives, ...pipes],
-  exports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule,
-    ...components,
-    ...directives,
-    ...pipes,
-  ],
+	imports: [FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule, CommonModule],
+	declarations: [...components, ...directives, ...pipes],
+	exports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		RouterModule,
+		...components,
+		...directives,
+		...pipes,
+	],
 })
 export class SharedModule {}

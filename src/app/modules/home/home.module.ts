@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './page/home.component';
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [SharedModule, HomeRoutingModule],
+	declarations: [HomeComponent],
+	imports: [SharedModule, HomeRoutingModule],
 })
 export class HomeModule {}

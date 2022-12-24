@@ -15,26 +15,14 @@ import { serverPages } from './modules/server';
 serverPages;
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SkeletonComponent,
-    FooterComponent,
-    HeaderComponent,
-    ...serverPages,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    CoreModule,
-    SharedModule,
-  ],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: PathLocationStrategy,
-    },
-  ],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent, SkeletonComponent, FooterComponent, HeaderComponent, ...serverPages],
+	imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, CoreModule, SharedModule],
+	providers: [
+		{
+			provide: LocationStrategy,
+			useClass: PathLocationStrategy,
+		},
+	],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}
