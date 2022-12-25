@@ -6,16 +6,12 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { SkeletonComponent } from './layout/skeleton/skeleton.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HeaderComponent } from './layout/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { serverPages } from './modules/server';
-
-serverPages;
+import { skeletonComponents } from './layout';
 
 @NgModule({
-	declarations: [AppComponent, SkeletonComponent, FooterComponent, HeaderComponent, ...serverPages],
+	declarations: [AppComponent, ...skeletonComponents, ...serverPages],
 	imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, CoreModule, SharedModule],
 	providers: [
 		{

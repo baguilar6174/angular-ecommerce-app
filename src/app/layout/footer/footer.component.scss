@@ -1,0 +1,220 @@
+.footer {
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.4rem;
+	color: #777;
+	background-color: #fff;
+}
+.footer a {
+	color: inherit;
+}
+.footer a:hover,
+.footer a:focus {
+	color: #c96;
+}
+.footer .widget {
+	margin-bottom: 4rem;
+}
+.footer .widget-title {
+	color: #333333;
+	font-weight: 500;
+	font-size: 1.6rem;
+	letter-spacing: -0.01em;
+	margin-top: 0;
+	margin-bottom: 1.9rem;
+}
+.footer-middle {
+	padding: 6.7rem 0 2.2rem;
+	border-top: 0.1rem solid #ebebeb;
+}
+.footer-logo {
+	margin-bottom: 2rem;
+	margin-top: -0.8rem;
+}
+.footer-bottom .container,
+.footer-bottom .container-fluid {
+	position: relative;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	padding-top: 2.1rem;
+	padding-bottom: 2.9rem;
+}
+.footer-bottom .container:before,
+.footer-bottom .container-fluid:before {
+	content: '';
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	right: 10px;
+	background-color: #ebebeb;
+}
+.footer-copyright {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.footer-payments {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+	.footer-bottom .container,
+	.footer-bottom .container-fluid {
+		flex-direction: row;
+	}
+	.footer-copyright {
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.footer-payments {
+		margin-right: 0;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.footer-bottom .container-fluid:before {
+		left: 30px;
+		right: 30px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.footer-bottom .container-fluid:before {
+		left: 70px;
+		right: 70px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.footer .widget-about .social-icon:not(:last-child) {
+		margin-right: 0.4rem;
+	}
+}
+.footer-dark {
+	background-color: #333333;
+}
+.footer-dark .footer-middle {
+	border-top-width: 0;
+}
+.footer-dark .widget-title {
+	color: #fff;
+}
+.footer-dark .social-icon:hover,
+.footer-dark .social-icon:focus {
+	color: #fff;
+}
+.footer-dark .footer-bottom {
+	color: #666666;
+}
+.footer-dark .footer-bottom .container:before {
+	background-color: #525455;
+}
+.footer-dark.footer-2 .widget-about-info a:not(:hover) {
+	color: #fff;
+}
+.footer-dark.footer-2 .widget-about-title {
+	color: #c96;
+}
+.footer-dark.footer-2 .footer-bottom {
+	color: #999999;
+}
+.footer-2 .footer-middle {
+	padding-top: 4.5rem;
+	padding-bottom: 0.4rem;
+}
+.footer-2 .footer-bottom .container {
+	padding-top: 2.2rem;
+	padding-bottom: 2.2rem;
+	flex-direction: column-reverse;
+}
+.footer-bottom .social-icons {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+}
+.footer-bottom .social-icon {
+	font-size: 1.3rem;
+}
+.footer-newsletter {
+	color: #ebebeb;
+	padding-top: 4.8rem;
+	padding-bottom: 5.5rem;
+}
+.footer-newsletter .heading {
+	margin-bottom: 2.4rem;
+}
+.footer-newsletter .title {
+	color: #fff;
+	font-weight: 500;
+}
+.footer-newsletter .title-desc {
+	color: inherit;
+	font-size: 1.6rem;
+	margin-top: 0.7rem;
+}
+.footer-newsletter .title-desc span {
+	color: #fff;
+	font-weight: 400;
+}
+.footer-newsletter .form-control {
+	height: 46px;
+	padding: 1.25rem 2rem;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #999999;
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+	transition: all 0.3s;
+}
+.footer-newsletter .form-control.form-control::placeholder {
+	color: #999999;
+}
+.footer-newsletter .btn i:last-child {
+	margin-left: 1rem;
+}
+.footer-menu {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.8rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer-menu li {
+	position: relative;
+}
+.footer-menu li + li {
+	margin-left: 2.1rem;
+}
+.footer-menu li + li:before {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 1.2rem;
+	position: absolute;
+	left: -1.1rem;
+	top: 50%;
+	margin-top: -0.6rem;
+	background-color: #b5b5b5;
+}
+.footer-menu a {
+	box-shadow: 0 1px 0 #b5b5b5;
+}
+@media screen and (min-width: 992px) {
+	.footer-2 .footer-bottom .container,
+	.footer-2 .footer-bottom .container-fluid {
+		flex-direction: row;
+	}
+	.footer-menu {
+		margin-bottom: 0;
+		margin-left: 0.6rem;
+		margin-right: 0;
+	}
+	.footer-bottom .social-icons {
+		margin-left: auto;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}
