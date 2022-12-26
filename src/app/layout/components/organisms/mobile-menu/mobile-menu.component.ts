@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { closeMobileMenuSidebar, openMobileMenuFromBody } from '../utils';
+import { closeMobileMenuSidebar, openMobileMenuFromBody } from '../../../utils';
 
 @Component({
 	selector: 'app-mobile-menu',

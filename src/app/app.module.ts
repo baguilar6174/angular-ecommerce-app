@@ -8,11 +8,11 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { serverPages } from './modules/server';
-import { skeletonComponents } from './layout';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-	declarations: [AppComponent, ...skeletonComponents, ...serverPages],
-	imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, CoreModule, SharedModule],
+	declarations: [AppComponent, ...serverPages],
+	imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, CoreModule, SharedModule, LayoutModule],
 	providers: [
 		{
 			provide: LocationStrategy,

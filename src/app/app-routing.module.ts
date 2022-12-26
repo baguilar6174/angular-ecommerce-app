@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { EMPTY_STRING, INTERNAL_PATHS, INTERNAL_ROUTES, PATH_ANY } from '@data/constants';
-import { SkeletonComponent } from './layout';
+import { SkeletonComponent } from './layout/components';
 import { Page400Component, Page404Component, Page500Component } from './modules/server';
 import { HomeModule } from '@modules/home/home.module';
 import { AuthModule } from '@modules/auth/auth.module';

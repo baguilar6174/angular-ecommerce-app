@@ -1,0 +1,529 @@
+<header class="header header-2 header-intro-clearance">
+	<div class="header-top">
+		<div class="container">
+			<div class="header-left">
+				<p>Special collection already available.</p>
+				<a routerLink="/">&nbsp;Read more ...</a>
+			</div>
+			<!-- End .header-left -->
+
+			<div class="header-right">
+				<ul class="top-menu">
+					<li>
+						<a routerLink="/">Links</a>
+						<ul>
+							<li>
+								<div class="header-dropdown">
+									<a routerLink="/">USD</a>
+									<div class="header-menu">
+										<ul>
+											<li><a routerLink="/">Eur</a></li>
+											<li><a routerLink="/">Usd</a></li>
+										</ul>
+									</div>
+									<!-- End .header-menu -->
+								</div>
+							</li>
+							<li>
+								<div class="header-dropdown">
+									<a routerLink="/">English</a>
+									<div class="header-menu">
+										<ul>
+											<li><a routerLink="/">English</a></li>
+											<li><a routerLink="/">French</a></li>
+											<li><a routerLink="/">Spanish</a></li>
+										</ul>
+									</div>
+									<!-- End .header-menu -->
+								</div>
+							</li>
+							<li>
+								<a routerLink="/" data-toggle="modal">Sign in / Sign up</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- End .top-menu -->
+			</div>
+			<!-- End .header-right -->
+		</div>
+		<!-- End .container -->
+	</div>
+	<!-- End .header-top -->
+
+	<div class="header-middle">
+		<div class="container">
+			<div class="header-left">
+				<button (click)="openMobileMenu()" class="mobile-menu-toggler">
+					<span class="visually-hidden">Toggle mobile menu</span>
+					<i class="icon-bars"></i>
+				</button>
+
+				<a routerLink="/" class="logo">
+					<img src="assets/images/demos/demo-2/logo.png" alt="Molla Logo" width="105" height="25" />
+				</a>
+			</div>
+			<!-- End .header-left -->
+
+			<div class="header-center">
+				<div
+					class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block"
+				>
+					<a routerLink="/" class="search-toggle" role="button"><i class="icon-search"></i></a>
+					<form action="#" method="get">
+						<div class="header-search-wrapper search-wrapper-wide">
+							<label for="q" class="visually-hidden">Search</label>
+							<input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required />
+							<button class="btn btn-primary" type="submit">
+								<i class="icon-search"></i>
+							</button>
+						</div>
+						<!-- End .header-search-wrapper -->
+					</form>
+				</div>
+				<!-- End .header-search -->
+			</div>
+
+			<div class="header-right">
+				<div class="account">
+					<a routerLink="/" title="My account">
+						<div class="icon">
+							<i class="icon-user"></i>
+						</div>
+						<p>Account</p>
+					</a>
+				</div>
+				<!-- End .compare-dropdown -->
+
+				<div class="wishlist">
+					<a routerLink="/" title="Wishlist">
+						<div class="icon">
+							<i class="icon-heart-o"></i>
+							<span class="wishlist-count badge">3</span>
+						</div>
+						<p>Wishlist</p>
+					</a>
+				</div>
+				<!-- End .compare-dropdown -->
+
+				<div class="dropdown cart-dropdown">
+					<a
+						class="dropdown-toggle"
+						id="dropdownCart"
+						role="button"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+						data-display="static"
+					>
+						<div class="icon">
+							<i class="icon-shopping-cart"></i>
+							<span class="cart-count">2</span>
+						</div>
+						<p>Cart</p>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right mt-8" aria-labelledby="dropdownCart">
+						<div class="dropdown-cart-products">
+							<div class="product">
+								<div class="product-cart-details">
+									<h4 class="product-title">
+										<a routerLink="/">Beige knitted elastic runner shoes</a>
+									</h4>
+
+									<span class="cart-product-info">
+										<span class="cart-product-qty">1</span>
+										x $84.00
+									</span>
+								</div>
+								<!-- End .product-cart-details -->
+
+								<figure class="product-image-container">
+									<a routerLink="/" class="product-image">
+										<img src="assets/images/products/cart/product-1.jpg" alt="product" />
+									</a>
+								</figure>
+								<a routerLink="/" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+							</div>
+							<!-- End .product -->
+
+							<div class="product">
+								<div class="product-cart-details">
+									<h4 class="product-title">
+										<a routerLink="/">Blue utility pinafore denim dress</a>
+									</h4>
+
+									<span class="cart-product-info">
+										<span class="cart-product-qty">1</span>
+										x $76.00
+									</span>
+								</div>
+								<!-- End .product-cart-details -->
+
+								<figure class="product-image-container">
+									<a routerLink="/" class="product-image">
+										<img src="assets/images/products/cart/product-2.jpg" alt="product" />
+									</a>
+								</figure>
+								<a routerLink="/" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+							</div>
+							<!-- End .product -->
+						</div>
+						<!-- End .cart-product -->
+
+						<div class="dropdown-cart-total">
+							<span>Total</span>
+
+							<span class="cart-total-price">$160.00</span>
+						</div>
+						<!-- End .dropdown-cart-total -->
+
+						<div class="dropdown-cart-action">
+							<a routerLink="/" class="btn btn-primary">View Cart</a>
+							<a routerLink="/" class="btn btn-outline-primary-2"
+								><span>Checkout</span><i class="icon-long-arrow-right"></i
+							></a>
+						</div>
+						<!-- End .dropdown-cart-total -->
+					</div>
+					<!-- End .dropdown-menu -->
+				</div>
+				<!-- End .cart-dropdown -->
+			</div>
+			<!-- End .header-right -->
+		</div>
+		<!-- End .container -->
+	</div>
+	<!-- End .header-middle -->
+
+	<div class="header-bottom sticky-header">
+		<div class="container">
+			<div class="header-left">
+				<div class="dropdown category-dropdown">
+					<a
+						class="dropdown-toggle"
+						role="button"
+						id="dropdownMenuCategories"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+						data-display="static"
+						title="Browse Categories"
+					>
+						Browse Categories
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuCategories">
+						<nav class="side-nav">
+							<ul class="menu-vertical sf-arrows">
+								<ng-container *ngFor="let category of categories; trackBy: trackByCategories">
+									<li [ngClass]="{ 'item-lead': category.isItemLead }">
+										<!-- TODO: add routerLink -->
+										<a>{{ category.name }}</a>
+									</li>
+								</ng-container>
+							</ul>
+							<!-- End .menu-vertical -->
+						</nav>
+						<!-- End .side-nav -->
+					</div>
+					<!-- End .dropdown-menu -->
+				</div>
+				<!-- End .category-dropdown -->
+			</div>
+			<!-- End .header-left -->
+
+			<div class="header-center">
+				<nav class="main-nav">
+					<ul class="menu sf-arrows">
+						<li class="megamenu-container active">
+							<a routerLink="/" class="sf-with-ul">Home</a>
+
+							<div class="megamenu demo">
+								<div class="menu-col">
+									<div class="menu-title">Choose your demo</div>
+									<!-- End .menu-title -->
+
+									<div class="demo-list">
+										<ng-container *ngFor="let demo of demos; trackBy: trackByDemos">
+											<div class="demo-item" [ngClass]="{ hidden: demo.isHidden }">
+												<a routerLink="/">
+													<span
+														class="demo-bg"
+														[ngStyle]="{ 'background-image': 'url(' + demo.backgroundImage + ')' }"
+													></span>
+													<span class="demo-title">{{ demo.title }}</span>
+												</a>
+											</div>
+											<!-- End .demo-item -->
+										</ng-container>
+									</div>
+									<!-- End .demo-list -->
+
+									<div class="megamenu-action text-center">
+										<a routerLink="/" class="btn btn-outline-primary-2 view-all-demos"
+											><span>View All Demos</span><i class="icon-long-arrow-right"></i
+										></a>
+									</div>
+									<!-- End .text-center -->
+								</div>
+								<!-- End .menu-col -->
+							</div>
+							<!-- End .megamenu -->
+						</li>
+						<li>
+							<a routerLink="/" class="sf-with-ul">Shop</a>
+
+							<div class="megamenu megamenu-md">
+								<div class="row no-gutters">
+									<div class="col-md-8">
+										<div class="menu-col">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="menu-title">Shop with sidebar</div>
+													<!-- End .menu-title -->
+													<ul>
+														<li><a routerLink="/">Shop List</a></li>
+														<li>
+															<a routerLink="/">Shop Grid 2 Columns</a>
+														</li>
+														<li>
+															<a routerLink="/">Shop Grid 3 Columns</a>
+														</li>
+														<li>
+															<a routerLink="/">Shop Grid 4 Columns</a>
+														</li>
+														<li>
+															<a routerLink="/"
+																><span>Shop Market<span class="tip tip-new">New</span></span></a
+															>
+														</li>
+													</ul>
+
+													<div class="menu-title">Shop no sidebar</div>
+													<!-- End .menu-title -->
+													<ul>
+														<li>
+															<a routerLink="/"
+																><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a
+															>
+														</li>
+														<li>
+															<a routerLink="/">Shop Fullwidth No Sidebar</a>
+														</li>
+													</ul>
+												</div>
+												<!-- End .col-md-6 -->
+
+												<div class="col-md-6">
+													<div class="menu-title">Product Category</div>
+													<!-- End .menu-title -->
+													<ul>
+														<li>
+															<a routerLink="/">Product Category Boxed</a>
+														</li>
+														<li>
+															<a routerLink="/"
+																><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a
+															>
+														</li>
+													</ul>
+													<div class="menu-title">Shop Pages</div>
+													<!-- End .menu-title -->
+													<ul>
+														<li><a routerLink="/">Cart</a></li>
+														<li><a routerLink="/">Checkout</a></li>
+														<li><a routerLink="/">Wishlist</a></li>
+														<li><a hrouterLink="/">My Account</a></li>
+														<li><a routerLink="/">Lookbook</a></li>
+													</ul>
+												</div>
+												<!-- End .col-md-6 -->
+											</div>
+											<!-- End .row -->
+										</div>
+										<!-- End .menu-col -->
+									</div>
+									<!-- End .col-md-8 -->
+
+									<div class="col-md-4">
+										<div class="banner banner-overlay">
+											<a routerLink="/" class="banner banner-menu">
+												<img src="assets/images/menu/banner-1.jpg" alt="Banner" />
+
+												<div class="banner-content banner-content-top">
+													<div class="banner-title text-white">
+														Last <br />Chance<br /><span><strong>Sale</strong></span>
+													</div>
+													<!-- End .banner-title -->
+												</div>
+												<!-- End .banner-content -->
+											</a>
+										</div>
+										<!-- End .banner banner-overlay -->
+									</div>
+									<!-- End .col-md-4 -->
+								</div>
+								<!-- End .row -->
+							</div>
+							<!-- End .megamenu megamenu-md -->
+						</li>
+						<li>
+							<a routerLink="/" class="sf-with-ul">Product</a>
+
+							<div class="megamenu megamenu-sm">
+								<div class="row no-gutters">
+									<div class="col-md-6">
+										<div class="menu-col">
+											<div class="menu-title">Product Details</div>
+											<!-- End .menu-title -->
+											<ul>
+												<li><a routerLink="/">Default</a></li>
+												<li><a routerLink="/">Centered</a></li>
+												<li>
+													<a routerLink="/"
+														><span>Extended Info<span class="tip tip-new">New</span></span></a
+													>
+												</li>
+												<li><a routerLink="/">Gallery</a></li>
+												<li><a routerLink="/">Sticky Info</a></li>
+												<li>
+													<a routerLink="/">Boxed With Sidebar</a>
+												</li>
+												<li><a routerLink="/">Full Width</a></li>
+												<li>
+													<a routerLink="/">Masonry Sticky Info</a>
+												</li>
+											</ul>
+										</div>
+										<!-- End .menu-col -->
+									</div>
+									<!-- End .col-md-6 -->
+
+									<div class="col-md-6">
+										<div class="banner banner-overlay">
+											<a routerLink="/">
+												<img src="assets/images/menu/banner-2.jpg" alt="Banner" />
+
+												<div class="banner-content banner-content-bottom">
+													<div class="banner-title text-white">
+														New Trends<br /><span><strong>spring 2019</strong></span>
+													</div>
+													<!-- End .banner-title -->
+												</div>
+												<!-- End .banner-content -->
+											</a>
+										</div>
+										<!-- End .banner -->
+									</div>
+									<!-- End .col-md-6 -->
+								</div>
+								<!-- End .row -->
+							</div>
+							<!-- End .megamenu megamenu-sm -->
+						</li>
+						<li>
+							<a routerLink="/" class="sf-with-ul">Pages</a>
+
+							<ul>
+								<li>
+									<a routerLink="/" class="sf-with-ul">About</a>
+
+									<ul>
+										<li><a routerLink="/">About 01</a></li>
+										<li><a routerLink="/">About 02</a></li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="/" class="sf-with-ul">Contact</a>
+
+									<ul>
+										<li><a routerLink="/">Contact 01</a></li>
+										<li><a routerLink="/">Contact 02</a></li>
+									</ul>
+								</li>
+								<li><a routerLink="/">Login</a></li>
+								<li><a routerLink="/">FAQs</a></li>
+								<li><a routerLink="/">Error 404</a></li>
+								<li><a routerLink="/">Coming Soon</a></li>
+							</ul>
+						</li>
+						<li>
+							<a routerLink="/" class="sf-with-ul">Blog</a>
+
+							<ul>
+								<li><a routerLink="/">Classic</a></li>
+								<li><a routerLink="/">Listing</a></li>
+								<li>
+									<a routerLink="/">Grid</a>
+									<ul>
+										<li><a routerLink="/">Grid 2 columns</a></li>
+										<li><a routerLink="/">Grid 3 columns</a></li>
+										<li><a routerLink="/">Grid 4 columns</a></li>
+										<li><a routerLink="/">Grid sidebar</a></li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="/">Masonry</a>
+									<ul>
+										<li>
+											<a routerLink="/">Masonry 2 columns</a>
+										</li>
+										<li>
+											<a routerLink="/">Masonry 3 columns</a>
+										</li>
+										<li>
+											<a routerLink="/">Masonry 4 columns</a>
+										</li>
+										<li>
+											<a routerLink="/">Masonry sidebar</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="/">Mask</a>
+									<ul>
+										<li><a routerLink="/">Blog mask grid</a></li>
+										<li>
+											<a routerLink="/">Blog mask masonry</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a routerLink="/">Single Post</a>
+									<ul>
+										<li><a routerLink="/">Default with sidebar</a></li>
+										<li>
+											<a routerLink="/">Fullwidth no sidebar</a>
+										</li>
+										<li>
+											<a routerLink="/">Fullwidth with sidebar</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a routerLink="/" class="sf-with-ul">Elements</a>
+							<ul>
+								<li *ngFor="let element of elements; trackBy: trackByElements">
+									<a routerLink="/">{{ element.name }}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- End .menu -->
+				</nav>
+				<!-- End .main-nav -->
+			</div>
+			<!-- End .header-center -->
+
+			<div class="header-right">
+				<i class="la la-lightbulb-o"></i>
+				<p>Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>
+			</div>
+		</div>
+		<!-- End .container -->
+	</div>
+	<!-- End .header-bottom -->
+</header>
+<!-- End .header -->
