@@ -7,6 +7,7 @@ import { Page400Component, Page404Component, Page500Component } from './modules/
 import { HomeModule } from '@modules/home/home.module';
 import { AuthModule } from '@modules/auth/auth.module';
 import { ProductsModule } from '@modules/products/products.module';
+import { ElementsModule } from '@modules/elements/elements.module';
 
 const routes: Routes = [
 	{
@@ -42,6 +43,11 @@ const routes: Routes = [
 				path: INTERNAL_PATHS.ECOMMERCE_PRODUCTS,
 				loadChildren: () =>
 					import('@modules/products/products.module').then((m): typeof ProductsModule => m.ProductsModule),
+			},
+			{
+				path: INTERNAL_PATHS.ECOMMERCE_ELEMENTS_DEFAULT,
+				loadChildren: () =>
+					import('@modules/elements/elements.module').then((m): typeof ElementsModule => m.ElementsModule),
 			},
 			{ path: PATH_ANY, redirectTo: EMPTY_STRING, pathMatch: 'full' },
 		],

@@ -503,7 +503,7 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/" class="sf-with-ul">Elements</a>
+							<a [routerLink]="INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_DEFAULT" class="sf-with-ul">Elements</a>
 							<ul>
 								<li *ngFor="let element of elements; trackBy: trackByElements">
 									<a routerLink="/">{{ element.name }}</a>
