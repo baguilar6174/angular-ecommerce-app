@@ -1,27 +1,69 @@
-# EcommerceWepApp
+# Ecommerce Wep App
+
+## Installation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
-## Development server
+Clone this repository
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+git clone https://github.com/baguilar6174/angular-ecommerce-app.git
+```
 
-## Code scaffolding
+Install dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm i
+```
 
-## Build
+## Running the app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
+## My process
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Built with
 
-## Running end-to-end tests
+- Angular 15
+- Typescript
+- Bootstrap 5
+- SCSS
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Development Features
 
-## Further help
+- Atomic design
+- Eslint and Prettier
+- Good folder structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## TODO:
+
+- Create more components
+- Http request
+- Interceptors
+- Update README
+- Documentation
+- Internationalization
+
+## Ecommerce Wep App
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align:center">Header</th>
+    </tr>
+  </thead>
+  <tr>
+    <td align="center" valign="center"><img src="./media/header_1.png" width="100%"></td>
+    <td align="center" valign="center"><img src="./media/header_3.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="center"><img src="./media/header_4.png" width="100%"></td>
+    <td align="center" valign="center"><img src="./media/header_5.png" width="100%"></td>
+  </tr>
+</table>
+
+## Stay in touch
+
+- Website - [www.bryan-aguilar.com](https://www.bryan-aguilar.com/)
+- Medium - [baguilar6174](https://baguilar6174.medium.com/)
+- LinkeIn - [baguilar6174](https://www.linkedin.com/in/baguilar6174)

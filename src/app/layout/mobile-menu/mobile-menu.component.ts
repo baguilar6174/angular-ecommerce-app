@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { closeMobileMenuSidebar, openMobileMenuFromBody } from '../utils';
 
 @Component({
 	selector: 'app-mobile-menu',
@@ -7,16 +8,16 @@ import { Component } from '@angular/core';
 })
 export class MobileMenuComponent {
 	closeMobileMenu(): void {
-		document.body.classList.remove('mmenu-active');
-		const mobileMenu = document.getElementById('mobile-menu');
-		if (mobileMenu) {
-			mobileMenu.style.removeProperty('visibility');
-			mobileMenu.style.removeProperty('transform');
-		}
-		const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-		if (mobileMenuOverlay) {
-			mobileMenuOverlay.style.removeProperty('visibility');
-			mobileMenuOverlay.style.removeProperty('opacity');
-		}
+		openMobileMenuFromBody();
+		closeMobileMenuSidebar();
+	}
+
+	openSubmenu(event: Event): void {
+		const a = event.target as HTMLElement;
+		// you can use alse currentTarget
+		const li = a.closest('li') as HTMLElement;
+		li.classList.add('open');
+		const ul = a.nextElementSibling;
+		console.log(ul);
 	}
 }

@@ -6,7 +6,7 @@
 	<div class="mobile-menu-wrapper">
 		<span (click)="closeMobileMenu()" class="mobile-menu-close"><i class="icon-close"></i></span>
 
-		<form action="#" method="get" class="mobile-search">
+		<form class="mobile-search">
 			<label for="mobile-search" class="visually-hidden">Search</label>
 			<input
 				type="search"
@@ -19,13 +19,13 @@
 			<button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
 		</form>
 
-		<ul class="nav nav-pills-mobile nav-border-anim" role="tablist">
+		<ul class="nav nav-pills-mobile nav-border-anim" id="myTab" role="tablist">
 			<li class="nav-item">
 				<a
 					class="nav-link active"
 					id="mobile-menu-link"
-					data-toggle="tab"
-					href="#mobile-menu-tab"
+					data-bs-toggle="tab"
+					data-bs-target="#mobile-menu-tab"
 					role="tab"
 					aria-controls="mobile-menu-tab"
 					aria-selected="true"
@@ -36,8 +36,8 @@
 				<a
 					class="nav-link"
 					id="mobile-cats-link"
-					data-toggle="tab"
-					href="#mobile-cats-tab"
+					data-bs-toggle="tab"
+					data-bs-target="#mobile-cats-tab"
 					role="tab"
 					aria-controls="mobile-cats-tab"
 					aria-selected="false"
@@ -46,14 +46,22 @@
 			</li>
 		</ul>
 
-		<div class="tab-content">
+		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
 				<nav class="mobile-nav">
 					<ul class="mobile-menu">
 						<li class="active">
-							<a routerLink="/">Home</a>
-
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapseHome"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapseHome"
+							>
+								Home
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapseHome">
 								<li><a routerLink="/">01 - furniture store</a></li>
 								<li><a routerLink="/">02 - furniture store</a></li>
 								<li><a routerLink="/">03 - electronic store</a></li>
@@ -81,8 +89,17 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/">Shop</a>
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapseShop"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapseShop"
+							>
+								Shop
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapseShop">
 								<li><a routerLink="/">Shop List</a></li>
 								<li><a routerLink="/">Shop Grid 2 Columns</a></li>
 								<li><a routerLink="/">Shop Grid 3 Columns</a></li>
@@ -106,8 +123,18 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/" class="sf-with-ul">Product</a>
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapseProduct"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapseProduct"
+								class="sf-with-ul"
+							>
+								Product
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapseProduct">
 								<li><a routerLink="/">Default</a></li>
 								<li><a routerLink="/">Centered</a></li>
 								<li>
@@ -123,8 +150,17 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/">Pages</a>
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapsePages"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapsePages"
+							>
+								Pages
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapsePages">
 								<li>
 									<a routerLink="/">About</a>
 
@@ -148,14 +184,31 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/">Blog</a>
-
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapseBlog"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapseBlog"
+							>
+								Blog
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapseBlog">
 								<li><a routerLink="/">Classic</a></li>
 								<li><a routerLink="/">Listing</a></li>
 								<li>
-									<a routerLink="/">Grid</a>
-									<ul>
+									<a
+										data-bs-toggle="collapse"
+										href="#collapseBlogGrid"
+										role="button"
+										aria-expanded="false"
+										aria-controls="collapseBlogGrid"
+									>
+										Grid
+										<span class="mmenu-btn"></span>
+									</a>
+									<ul class="collapse" id="collapseBlogGrid">
 										<li><a routerLink="/">Grid 2 columns</a></li>
 										<li><a routerLink="/">Grid 3 columns</a></li>
 										<li><a routerLink="/">Grid 4 columns</a></li>
@@ -163,8 +216,17 @@
 									</ul>
 								</li>
 								<li>
-									<a routerLink="/">Masonry</a>
-									<ul>
+									<a
+										data-bs-toggle="collapse"
+										href="#collapseBlogMasonry"
+										role="button"
+										aria-expanded="false"
+										aria-controls="collapseBlogMasonry"
+									>
+										Masonry
+										<span class="mmenu-btn"></span>
+									</a>
+									<ul class="collapse" id="collapseBlogMasonry">
 										<li><a routerLink="/">Masonry 2 columns</a></li>
 										<li><a routerLink="/">Masonry 3 columns</a></li>
 										<li><a routerLink="/">Masonry 4 columns</a></li>
@@ -172,15 +234,33 @@
 									</ul>
 								</li>
 								<li>
-									<a routerLink="/">Mask</a>
-									<ul>
+									<a
+										data-bs-toggle="collapse"
+										href="#collapseBlogMask"
+										role="button"
+										aria-expanded="false"
+										aria-controls="collapseBlogMask"
+									>
+										Mask
+										<span class="mmenu-btn"></span>
+									</a>
+									<ul class="collapse" id="collapseBlogMask">
 										<li><a routerLink="/">Blog mask grid</a></li>
 										<li><a routerLink="/">Blog mask masonry</a></li>
 									</ul>
 								</li>
 								<li>
-									<a routerLink="/">Single Post</a>
-									<ul>
+									<a
+										data-bs-toggle="collapse"
+										href="#collapseBlogSingle"
+										role="button"
+										aria-expanded="false"
+										aria-controls="collapseBlogSingle"
+									>
+										Single Post
+										<span class="mmenu-btn"></span>
+									</a>
+									<ul class="collapse" id="collapseBlogSingle">
 										<li><a routerLink="/">Default with sidebar</a></li>
 										<li><a routerLink="/">Fullwidth no sidebar</a></li>
 										<li><a routerLink="/">Fullwidth with sidebar</a></li>
@@ -189,8 +269,17 @@
 							</ul>
 						</li>
 						<li>
-							<a routerLink="/">Elements</a>
-							<ul>
+							<a
+								data-bs-toggle="collapse"
+								href="#collapseElements"
+								role="button"
+								aria-expanded="false"
+								aria-controls="collapseElements"
+							>
+								Elements
+								<span class="mmenu-btn"></span>
+							</a>
+							<ul class="collapse" id="collapseElements">
 								<li><a routerLink="/">Products</a></li>
 								<li><a routerLink="/">Typography</a></li>
 								<li><a routerLink="/">Titles</a></li>

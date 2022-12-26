@@ -108,8 +108,8 @@
 
 				<div class="dropdown cart-dropdown">
 					<a
-						routerLink="/"
 						class="dropdown-toggle"
+						id="dropdownCart"
 						role="button"
 						data-toggle="dropdown"
 						aria-haspopup="true"
@@ -123,7 +123,7 @@
 						<p>Cart</p>
 					</a>
 
-					<div class="dropdown-menu dropdown-menu-right">
+					<div class="dropdown-menu dropdown-menu-right mt-8" aria-labelledby="dropdownCart">
 						<div class="dropdown-cart-products">
 							<div class="product">
 								<div class="product-cart-details">
@@ -201,9 +201,9 @@
 			<div class="header-left">
 				<div class="dropdown category-dropdown">
 					<a
-						routerLink="/"
 						class="dropdown-toggle"
 						role="button"
+						id="dropdownMenuCategories"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -213,7 +213,7 @@
 						Browse Categories
 					</a>
 
-					<div class="dropdown-menu">
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuCategories">
 						<nav class="side-nav">
 							<ul class="menu-vertical sf-arrows">
 								<li class="item-lead"><a routerLink="/">Daily offers</a></li>
