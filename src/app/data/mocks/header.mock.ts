@@ -1,3 +1,4 @@
+import { INTERNAL_ROUTES } from '../constants';
 import { Category, Demo, Element } from '../interfaces';
 
 export const CATEGORIES_DATA_ITEMS: Category[] = [
@@ -209,57 +210,71 @@ export const ELEMENTS_DATA_ITEMS: Element[] = [
 	{
 		id: 'products',
 		name: 'Products',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'typography',
 		name: 'Typography',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'titles',
 		name: 'Titles',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'banners',
 		name: 'Banners',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'product-category',
 		name: 'Product Category',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'video-banners',
 		name: 'Video Banners',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'buttons',
 		name: 'Buttons',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'accordions',
 		name: 'Accordions',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'tabs',
 		name: 'Tabs',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'testimonials',
 		name: 'Testimonials',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'blog-posts',
 		name: 'Blog Posts',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'portfolio',
 		name: 'Portfolio',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'call-to-action',
 		name: 'Call to Action',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 	{
 		id: 'icon-boxes',
 		name: 'Icon Boxes',
+		link: INTERNAL_ROUTES.ECOMMERCE_ELEMENTS_BUTTONS,
 	},
 ];

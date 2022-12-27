@@ -43,6 +43,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 - Update README
 - Documentation
 - Internationalization
+- Override Bootstrap variables
+- Order CSS code
+- Order system desing
 
 ## Ecommerce Wep App
 

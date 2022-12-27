@@ -1,5 +1,5 @@
-import { PageTitleComponent } from './molecules';
+import { PageTitleComponent, BreadcrumbComponent } from './molecules';
 
-export const components = [PageTitleComponent];
+export const components = [PageTitleComponent, BreadcrumbComponent];
 
 export * from './molecules';

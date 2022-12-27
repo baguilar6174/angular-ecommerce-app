@@ -1,133 +1,18 @@
-<app-page-title title="All elements" subtitle="Elements"></app-page-title>
+<app-page-title header="All elements" subtitle="Elements"></app-page-title>
 <!-- Elements list -->
 <div class="container my-5">
 	<div class="row elements">
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>accordions</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>banners</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>blog posts</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a [routerLink]="INTERNAL_PATHS.ECOMMERCE_ELEMENTS_BUTTONS" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>buttons</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>call to action</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>icon boxes</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>portfolio</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>product catigories</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>products</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>tabs</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>testimonials</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>titles</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>typography</p>
-				</div>
-			</a>
-		</div>
-		<div class="col-xl-5col col-lg-4 col-md-3 col-6">
-			<a routerLink="/" class="element-type">
-				<div class="element">
-					<i class="element-img"></i>
-					<i class="element-hover-img"></i>
-					<p>video</p>
-				</div>
-			</a>
-		</div>
+		<ng-container *ngFor="let element of elements; trackBy: trackByElements">
+			<div class="col-xl-5col col-lg-4 col-md-3 col-6">
+				<a [routerLink]="element.link" class="element-type">
+					<div class="element">
+						<i class="element-img"></i>
+						<i class="element-hover-img"></i>
+						<p>{{ element.name }}</p>
+					</div>
+				</a>
+			</div>
+		</ng-container>
 	</div>
 </div>
 <!-- End Elements list -->

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { INTERNAL_PATHS } from '@data/constants';
+import { BASE_ELEMENTS_DATA_ITEMS } from '@data/mocks';
 
 @Component({
 	selector: 'app-default',
@@ -7,6 +7,13 @@ import { INTERNAL_PATHS } from '@data/constants';
 	styleUrls: ['./default.component.scss'],
 })
 export class DefaultComponent {
+	constructor() {
+		window.scrollTo(0, 0);
+	}
+
 	// const and variables
-	public INTERNAL_PATHS = INTERNAL_PATHS;
+	public elements: { name: string; link: string }[] = BASE_ELEMENTS_DATA_ITEMS;
+
+	// trackBy functions
+	trackByElements = (_: number, item: { name: string; link: string }): string => item.name;
 }

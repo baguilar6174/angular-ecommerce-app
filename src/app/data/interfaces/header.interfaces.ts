@@ -14,4 +14,5 @@ export interface Demo {
 export interface Element {
 	id: string;
 	name: string;
+	link: string;
 }

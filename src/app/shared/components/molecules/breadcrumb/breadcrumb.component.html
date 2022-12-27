@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a routerLink="/">Home</a>
+			</li>
+			<ng-container *ngFor="let breadcrumb of breadcrumbs; let i = index">
+				<li
+					class="breadcrumb-item"
+					[ngClass]="{ active: i + 1 === breadcrumbs.length }"
+					[attr.aria-label]="breadcrumb.label"
+				>
+					<ng-container *ngIf="i + 1 === breadcrumbs.length; else elseBlock">
+						{{ breadcrumb.label }}
+					</ng-container>
+					<ng-template #elseBlock>
+						<a [routerLink]="breadcrumb.url" routerLinkActive="router-link-active">{{ breadcrumb.label }}</a>
+					</ng-template>
+				</li>
+			</ng-container>
+		</ol>
+	</div>
+</nav>
+<!-- End .breadcrumb-nav -->

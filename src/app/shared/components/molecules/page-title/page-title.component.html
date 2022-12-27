@@ -1,20 +1,8 @@
 <div class="page-header text-center" [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }">
 	<div class="container">
 		<h1 class="page-title">
-			{{ title }}<span>{{ subtitle }} </span>
+			{{ header }}<span>{{ subtitle }} </span>
 		</h1>
 	</div>
-	<!-- End .container -->
 </div>
-<!-- End .page-header -->
-<!-- TODO: custom breadcrumb -->
-<nav aria-label="breadcrumb" class="breadcrumb-nav">
-	<div class="container">
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-			<li class="breadcrumb-item"><a href="elements-list.html">Elements</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Buttons</li>
-		</ol>
-	</div>
-</nav>
-<!-- End .breadcrumb-nav -->
+<app-breadcrumb></app-breadcrumb>

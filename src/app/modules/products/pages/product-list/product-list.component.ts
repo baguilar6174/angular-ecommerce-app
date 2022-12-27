@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
 	templateUrl: './product-list.component.html',
 	styleUrls: ['./product-list.component.scss'],
 })
-export class ProductListComponent {}
+export class ProductListComponent {
+	constructor() {
+		window.scrollTo(0, 0);
+	}
+}

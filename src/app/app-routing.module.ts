@@ -34,20 +34,32 @@ const routes: Routes = [
 			{
 				path: INTERNAL_PATHS.ECOMMERCE_DEFAULT,
 				loadChildren: () => import('@modules/home/home.module').then((m): typeof HomeModule => m.HomeModule),
+				data: {
+					breadcrumb: 'Home',
+				},
 			},
 			{
 				path: INTERNAL_PATHS.AUTH_DEFAULT,
 				loadChildren: () => import('@modules/auth/auth.module').then((m): typeof AuthModule => m.AuthModule),
+				data: {
+					breadcrumb: 'Auth',
+				},
 			},
 			{
 				path: INTERNAL_PATHS.ECOMMERCE_PRODUCTS,
 				loadChildren: () =>
 					import('@modules/products/products.module').then((m): typeof ProductsModule => m.ProductsModule),
+				data: {
+					breadcrumb: 'Products',
+				},
 			},
 			{
 				path: INTERNAL_PATHS.ECOMMERCE_ELEMENTS_DEFAULT,
 				loadChildren: () =>
 					import('@modules/elements/elements.module').then((m): typeof ElementsModule => m.ElementsModule),
+				data: {
+					breadcrumb: 'Elements',
+				},
 			},
 			{ path: PATH_ANY, redirectTo: EMPTY_STRING, pathMatch: 'full' },
 		],
