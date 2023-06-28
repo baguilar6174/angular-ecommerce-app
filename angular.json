@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"ecommerce-wep-app": {
+		"angular-ecommerce-app": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/ecommerce-wep-app",
+						"outputPath": "dist/angular-ecommerce-app",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": ["zone.js"],
@@ -63,10 +63,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "ecommerce-wep-app:build:production"
+							"browserTarget": "angular-ecommerce-app:build:production"
 						},
 						"development": {
-							"browserTarget": "ecommerce-wep-app:build:development"
+							"browserTarget": "angular-ecommerce-app:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -74,7 +74,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "ecommerce-wep-app:build"
+						"browserTarget": "angular-ecommerce-app:build"
 					}
 				},
 				"test": {
@@ -98,6 +98,7 @@
 		}
 	},
 	"cli": {
+		"analytics": "0b6a24a5-26fb-4448-8ec3-07bdcd395438",
 		"schematicCollections": ["@angular-eslint/schematics"]
 	}
 }
